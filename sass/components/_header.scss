@@ -44,7 +44,7 @@
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
 }
 
 .site-nav li:nth-child(-n+2){
@@ -59,7 +59,7 @@
 .site-nav a:hover,
 .site-nav a:focus{
     color: $bt-second;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
 }
 
 .site-nav .link.current{
@@ -100,17 +100,13 @@
     color: $text-color-grey;
     display: flex;
     align-items: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
 }
 
 .contacts-nav a:hover,
 .contacts-nav a:focus{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
     color: $bt-second;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
 }
 
 .link-icon{
@@ -118,12 +114,12 @@
     padding-right: 10px;
 }
 
-.icon-email{
-    width: 16px;
-    height: 12px;
-}
+// .icon-email{
+//     width: 16px;
+//     height: 12px;
+// }
 
-.icon-smartphone{
-    width: 10px;
-    height: 16px;
-}
+// .icon-smartphone{
+//     width: 10px;
+//     height: 16px;
+// }
