@@ -193,7 +193,7 @@ textarea[name="comment"]::-moz-placeholder {
 .input-checkbox svg{
     display: inline-block;
     transition-duration: 250ms;
-    transition-timing-function: $animating-timing;
+    transition-timing-function: $animation-timing;
 }
   
 .input-checkbox:checked + svg{
@@ -204,7 +204,7 @@ textarea[name="comment"]::-moz-placeholder {
     fill: transparent;
     border-radius: 2px;
     transition-duration: 250ms;
-    transition-timing-function: $animating-timing;
+    transition-timing-function: $animation-timing;
 }
   
 .checkbox-text{
