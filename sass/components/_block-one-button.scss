@@ -1,7 +1,7 @@
 .button {
     width: 200px;
     height: 50px;
-    background: var(--bt-second);
+    background: $bt-second;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-weight: 700;
@@ -14,7 +14,7 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--text-color-white);
+    color: $text-color-white;
     border: 0;
     outline: none;
 }
