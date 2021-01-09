@@ -9,7 +9,6 @@
 .header-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo{
@@ -35,7 +34,6 @@
 
 .site-nav{
     display: flex;
-    margin-right: 305px;
 }
 
 .site-nav a{
@@ -77,49 +75,3 @@
     position: relative;
     top: 31.5px;
 }
-
-/*Контакты*/
-.contacts-nav{
-    display: flex;
-}
-
-.contacts-nav li{
-    display: flex;
-    align-items: center;
-}
-
-.contacts-nav li:nth-child(1){
-    padding-right: 30px;
-}
-
-.contacts-nav a{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $text-color-grey;
-    display: flex;
-    align-items: center;
-    transition: $animation-timing-time;
-}
-
-.contacts-nav a:hover,
-.contacts-nav a:focus{
-    color: $bt-second;
-    transition: $animation-timing-time;
-}
-
-.link-icon{
-    fill: currentColor;
-    padding-right: 10px;
-}
-
-// .icon-email{
-//     width: 16px;
-//     height: 12px;
-// }
-
-// .icon-smartphone{
-//     width: 10px;
-//     height: 16px;
-// }

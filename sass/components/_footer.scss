@@ -36,7 +36,7 @@
 
 /* Адрес и контакты */
 .adress-footer{
-    padding-top: 20px;
+    margin-top: 20px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -44,6 +44,7 @@
     line-height: 24px;
     letter-spacing: 0.03em;
     height: 81px;
+    width: 231px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -142,7 +143,7 @@
 
 .subscription-div{
     display: flex;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .subscription-input{
