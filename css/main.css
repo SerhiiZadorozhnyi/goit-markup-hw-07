@@ -376,8 +376,10 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav li:nth-child(-n+2) {
-  padding-right: 50px;
+.site-nav a:hover, .site-nav a:focus {
+  color: #2196F3;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav li {
@@ -388,18 +390,15 @@ a {
       justify-content: space-around;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #2196F3;
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.site-nav li:nth-child(-n+2) {
+  padding-right: 50px;
 }
 
 .site-nav .link.current {
   color: #2196F3;
 }
 
-.site-nav .link.current::after {
+.site-nav .link.current:after {
   display: box;
   background: currentColor;
   content: "";
@@ -496,12 +495,6 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.commands-text {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
 .commands-list h3 {
   font-weight: 500;
   font-size: 16px;
@@ -516,6 +509,12 @@ a {
   letter-spacing: 0.03em;
   color: #757575;
   padding-top: 10px;
+}
+
+.commands-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .social-list {
@@ -549,8 +548,7 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
+.social-list-link:hover, .social-list-link:focus {
   color: #FFFFFF;
   background-color: #2196F3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -621,8 +619,7 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients-link:hover, .clients-link:focus {
   color: #2196F3;
   border: 1px solid #2196F3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -631,11 +628,6 @@ a {
 
 .clients-icon {
   fill: currentColor;
-}
-
-.icon-clients:hover,
-.icon-clients:focus {
-  fill: #2196F3;
 }
 
 /* Подвал страницы */
@@ -706,15 +698,6 @@ a {
           justify-content: space-between;
 }
 
-.adress {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-}
-
 .adress-footer a {
   font-family: Roboto;
   font-style: normal;
@@ -723,6 +706,15 @@ a {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
 }
 
 /* Присоединяйтесь */
@@ -755,14 +747,14 @@ a {
   display: flex;
 }
 
+.footer-social-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
 .footer-social-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.footer-social-list li:not(:last-child) {
-  margin-right: 10px;
 }
 
 .footer-social-link {
@@ -784,8 +776,7 @@ a {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-link:hover,
-.footer-social-link:focus {
+.footer-social-link:hover, .footer-social-link:focus {
   background: #2196F3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1060,13 +1051,13 @@ input[type="email"]::-moz-placeholder {
   z-index: 1;
 }
 
-.backdrop.is-hidden {
+.backdrop .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop .is-hidden .modal {
   opacity: 0;
 }
 
@@ -1092,6 +1083,19 @@ input[type="email"]::-moz-placeholder {
   z-index: 2;
 }
 
+.modal p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  padding-top: 2px;
+  padding-bottom: 12px;
+}
+
 @-webkit-keyframes anim {
   0% {
     -webkit-transform: scale(0) translate(-50%, -50%);
@@ -1112,19 +1116,6 @@ input[type="email"]::-moz-placeholder {
     -webkit-transform: scale(1) translate(-50%, -50%);
             transform: scale(1) translate(-50%, -50%);
   }
-}
-
-.modal p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  padding-top: 2px;
-  padding-bottom: 12px;
 }
 
 /* Содержимое модального окна */
@@ -1174,9 +1165,19 @@ input[type="email"]::-moz-placeholder {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-text.comments {
-  height: 120px;
-  padding-left: 16px;
+.input-text:hover, .input-text:focus {
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #2196F3;
+  cursor: pointer;
+}
+
+.input-text:hover + .modal-input-svg,
+.input-text:hover + .modal-input-svg, .input-text:focus + .modal-input-svg,
+.input-text:focus + .modal-input-svg {
+  fill: #2196F3;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment {
@@ -1200,11 +1201,10 @@ input[type="email"]::-moz-placeholder {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.comment:hover,
-.comment:focus {
-  border: 1px solid #2196F3;
+.comment:hover, .comment:focus {
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #2196F3;
   cursor: pointer;
 }
 
@@ -1216,38 +1216,12 @@ textarea[name="comment"]::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.input-text:hover,
-.input-text:focus {
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: #2196F3;
-  border: 1px solid #2196F3;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.input-text:hover + .modal-input-svg,
-.input-text:focus + .modal-input-svg {
-  fill: #2196F3;
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-input-svg {
   width: 18px;
   height: 18px;
   position: absolute;
   left: 12px;
   fill: #212121;
-}
-
-.input-comments:hover,
-.input-comments:focus {
-  border: 1px solid #2196F3;
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Чекбокс */
@@ -1369,8 +1343,7 @@ textarea[name="comment"]::-moz-placeholder {
   outline: none;
 }
 
-.send-button:hover,
-.send-button:focus {
+.send-button:hover, .send-button:focus {
   background: #188CE8;
   cursor: pointer;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1402,6 +1375,13 @@ textarea[name="comment"]::-moz-placeholder {
   cursor: pointer;
 }
 
+.button-close:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #2196F3;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @-webkit-keyframes back-anim {
   0% {
     -webkit-transform: scale(1);
@@ -1431,16 +1411,9 @@ textarea[name="comment"]::-moz-placeholder {
   fill: currentColor;
 }
 
-.button-close:hover {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #2196F3;
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
 
 .portfolio-div {
@@ -1486,8 +1459,7 @@ textarea[name="comment"]::-moz-placeholder {
   cursor: pointer;
 }
 
-.portfolio-nav button:hover,
-.portfolio-nav button:focus {
+.portfolio-nav button:hover, .portfolio-nav button:focus {
   color: #FFFFFF;
   background: #2196F3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -1497,8 +1469,8 @@ textarea[name="comment"]::-moz-placeholder {
 }
 
 .projects {
-  padding-top: 50px;
   height: 1272px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1519,8 +1491,7 @@ textarea[name="comment"]::-moz-placeholder {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects li:hover,
-.projects li:focus {
+.projects li:hover, .projects li:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1537,21 +1508,12 @@ textarea[name="comment"]::-moz-placeholder {
           flex-direction: column;
 }
 
-.projects-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.projects a:hover .overlay {
+.projects a:hover .overlay,
+.projects a:focus .overlay {
   -webkit-transform: translatex(0);
           transform: translatex(0);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay {
@@ -1563,10 +1525,8 @@ textarea[name="comment"]::-moz-placeholder {
   background: rgba(33, 150, 243, 0.9);
   -webkit-transform: translatey(100%);
           transform: translatey(100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay p {
@@ -1581,6 +1541,14 @@ textarea[name="comment"]::-moz-placeholder {
   padding-right: 24px;
   padding-bottom: 63px;
   padding-left: 24px;
+}
+
+.projects-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .projects-text {
@@ -1646,8 +1614,7 @@ textarea[name="comment"]::-moz-placeholder {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-nav a:hover,
-.contacts-nav a:focus {
+.contacts-nav a:hover, .contacts-nav a:focus {
   color: #2196F3;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);

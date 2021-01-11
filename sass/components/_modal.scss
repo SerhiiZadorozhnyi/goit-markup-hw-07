@@ -7,18 +7,17 @@
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     z-index: 1;
-}
 
-.backdrop.is-hidden{
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
+    .is-hidden{
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
 
-.backdrop.is-hidden .modal{
-    opacity: 0;
+        .modal{
+            opacity: 0;
+        }
+    }
 }
-
     
 .modal{
     position: fixed;
@@ -35,6 +34,19 @@
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     z-index: 2;
+
+    p{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $text-color-black;
+        padding-top: 2px;
+        padding-bottom: 12px;
+    }
 }
 
 @keyframes anim{
@@ -47,27 +59,14 @@
     }
 }
 
-.modal p{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $text-color-black;
-    padding-top: 2px;
-    padding-bottom: 12px;
-}
-
 /* Содержимое модального окна */
 .modal-input{
     padding-left: 40px;
     padding-right: 40px;
-}
 
-.modal-input li:not(:last-child){
-    padding-bottom: 10px;
+    li:not(:last-child){
+        padding-bottom: 10px;
+    }
 }
 
 .modal-input-text{
@@ -98,12 +97,20 @@
     outline: none;
     color: $black-color;
     cursor: pointer;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: $animation-timing-time;
 
-.input-text.comments{
-    height: 120px;
-    padding-left: 16px;
+        &:hover,
+        &:focus{
+            transition: $animation-timing-time;
+            border: 1px solid $accent-color;
+            cursor: pointer;
+
+            + .modal-input-svg,
+            + .modal-input-svg{
+                fill: $accent-color;
+                transition: $animation-timing-time;
+            }
+        }
 }
 
 .comment{
@@ -122,15 +129,14 @@
     line-height: 16px;
     letter-spacing: 0.01em;
     color: $black-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: $animation-timing-time;
 
-.comment:hover,
-.comment:focus{
-    border: 1px solid $accent-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    
+    &:hover,
+    &:focus{
+        transition: $animation-timing-time;
+        border: 1px solid $accent-color;
+        cursor: pointer;
+    }
 }
 
 textarea[name="comment"]::-webkit-input-placeholder {
@@ -141,34 +147,12 @@ textarea[name="comment"]::-moz-placeholder {
     color: rgba(117, 117, 117, 0.5)
    }
 
-.input-text:hover,
-.input-text:focus{
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill: $accent-color;
-    border: 1px solid $accent-color;
-    box-sizing: border-box;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.input-text:hover + .modal-input-svg,
-.input-text:focus + .modal-input-svg{
-    fill: $accent-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-input-svg{
     width: 18px;
     height: 18px;
     position: absolute;
     left: 12px;
     fill: $text-color-black;
-}
-
-.input-comments:hover,
-.input-comments:focus{
-    border: 1px solid $accent-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Чекбокс */
@@ -188,23 +172,23 @@ textarea[name="comment"]::-moz-placeholder {
     margin-right: 8px;
     appearance: none;
     cursor: pointer;
-}
-  
-.input-checkbox svg{
-    display: inline-block;
-    transition-duration: 250ms;
-    transition-timing-function: $animation-timing;
-}
-  
-.input-checkbox:checked + svg{
-    background-image: url("../images/icons/icon-check.svg");
-    background-color: $accent-color;
-    background-size: contain;
-    background-origin: border-box;
-    fill: transparent;
-    border-radius: 2px;
-    transition-duration: 250ms;
-    transition-timing-function: $animation-timing;
+
+    svg{
+        display: inline-block;
+        transition-duration: 250ms;
+        transition-timing-function: $animation-timing;
+    }
+
+    &:checked + svg{
+        background-image: url("../images/icons/icon-check.svg");
+        background-color: $accent-color;
+        background-size: contain;
+        background-origin: border-box;
+        fill: transparent;
+        border-radius: 2px;
+        transition-duration: 250ms;
+        transition-timing-function: $animation-timing;
+    }
 }
   
 .checkbox-text{
@@ -257,15 +241,15 @@ textarea[name="comment"]::-moz-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
     outline: none;
-}
 
-.send-button:hover,
-.send-button:focus{
+    &:hover,
+    &:focus{
     background: #188CE8;
     cursor: pointer;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
+    }
 }
 
 .button-close{
@@ -282,8 +266,14 @@ textarea[name="comment"]::-moz-placeholder {
     align-items: center;
     position: relative;
     left: 490px;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
     cursor: pointer;
+
+    &:hover{
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        color: $accent-color;
+        transition: $animation-timing-time;
+    }
 }
 
 @keyframes back-anim{
@@ -301,10 +291,4 @@ textarea[name="comment"]::-moz-placeholder {
     width: 11px;
     height: 11px;
     fill: currentColor;
-}
-
-.button-close:hover{
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: $accent-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

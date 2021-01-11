@@ -2,32 +2,32 @@
 .contacts-nav{
     display: flex;
     margin-left: 305px;
-}
 
-.contacts-nav li{
-    display: flex;
-    align-items: center;
-}
+    li{
+        display: flex;
+        align-items: center;
 
-.contacts-nav li:nth-child(1){
-    padding-right: 30px;
-}
+        &:nth-child(1){
+            padding-right: 30px;
+        }
+    }
 
-.contacts-nav a{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $text-color-grey;
-    display: flex;
-    align-items: center;
-    transition: $animation-timing-time;
-}
+    a{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: $text-color-grey;
+        display: flex;
+        align-items: center;
+        transition: $animation-timing-time;
 
-.contacts-nav a:hover,
-.contacts-nav a:focus{
-    color: $bt-second;
-    transition: $animation-timing-time;
+        &:hover,
+        &:focus{
+        color: $bt-second;
+        transition: $animation-timing-time;
+        }
+    }
 }
 
 .link-icon{

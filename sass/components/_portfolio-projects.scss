@@ -1,41 +1,35 @@
 .projects{
-    padding-top: 50px;
     height: 1272px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
-}
 
-.projects li{
-    height: 404px;
-    width: 370px;
-    background: $text-color-white;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    li{
+        height: 404px;
+        width: 370px;
+        background: $text-color-white;
+        transition: $animation-timing-time;
+        
+        &:hover,
+        &:focus{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition: $animation-timing-time;
+        }
+    }
 
-.projects li:hover,
-.projects li:focus{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // transition: $animation-timing-time;
-}
+    a{
+        display: flex;
+        flex-direction: column;
 
-.projects a{
-    display: flex;
-    flex-direction: column
+        &:hover .overlay,
+        &:focus .overlay{
+            transform: translatex(0);
+            transition: $animation-timing-time;
+        }
+    }
 }
-
-.projects-image{
-    display: flex;
-    position: relative;
-    overflow: hidden;
-}
-
-.projects a:hover .overlay {
-    transform: translatex(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
 .overlay{
     position: absolute;
@@ -45,21 +39,27 @@
     height: 294px;
     background: rgba(33, 150, 243, 0.9);
     transform: translatey(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
+
+    p{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: $text-color-white;
+        padding-top: 63px;
+        padding-right: 24px;
+        padding-bottom: 63px;
+        padding-left: 24px;
+    }
 }
 
-.overlay p{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-    padding-top: 63px;
-    padding-right: 24px;
-    padding-bottom: 63px;
-    padding-left: 24px;
+.projects-image{
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .projects-text{
@@ -70,20 +70,20 @@
     border-bottom: 1px solid $border-color;
     border-left: 1px solid $border-color;
     border-right: 1px solid $border-color;
-}
 
-.projects-text h3{
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 36px;
-    letter-spacing: 0.06em;
-    color: $text-color-black;
-    padding-bottom: 4px;
-}
+    h3{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        letter-spacing: 0.06em;
+        color: $text-color-black;
+        padding-bottom: 4px;
+    }
 
-.projects-text p{
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    color: $text-color-grey;
+    p{
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.03em;
+        color: $text-color-grey;
+    }
 }

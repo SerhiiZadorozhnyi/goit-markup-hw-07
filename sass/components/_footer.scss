@@ -20,7 +20,7 @@
 }
 
 /* Лого футтера */
-.footer-logo{
+.footer-logo {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -28,10 +28,10 @@
     line-height: 31px;
     letter-spacing: 0.03em;
     color: $bt-second;
-}
 
-.footer-logo span{
-    color: $text-color-white;
+    span {
+        color: $text-color-white;
+    }
 }
 
 /* Адрес и контакты */
@@ -48,6 +48,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    a{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .adress{
@@ -57,16 +67,6 @@
     line-height: 24px;
     letter-spacing: 0.03em;
     color: $text-color-white;
-}
-
-.adress-footer a{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Присоединяйтесь */
@@ -90,14 +90,14 @@
 
 .footer-social-list{
     display: flex;
+
+    li:not(:last-child){
+        margin-right: 10px;
+    }
 }
 
 .footer-social-list li{
     display: flex;
-}
-
-.footer-social-list li:not(:last-child){
-    margin-right: 10px;
 }
 
 .footer-social-link{
@@ -110,12 +110,12 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition: $animation-timing-time;
-}
 
-.footer-social-link:hover,
-.footer-social-link:focus{
+    &:hover,
+    &:focus{
     background: $accent-color;
     transition: $animation-timing-time;
+    }
 }
 
 .footer-social-icon{
@@ -129,16 +129,17 @@
     display: flex;
     flex-direction: column;
     margin-left: 93px;
-}
-.subscription p{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $text-color-white;
+
+    p{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $text-color-white;
+    }
 }
 
 .subscription-div{
@@ -189,23 +190,23 @@ input[type="email"]::-moz-placeholder {
     padding-right: 31px;
     margin-left: 15px;
     outline: none;
-}
 
-.button-subscription span{
-    color: $text-color-white;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-}
+    span{
+        color: $text-color-white;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
 
-.button-subscription svg{
-    fill: $text-color-white;
-    width: 24px;
-    height: 24px;
+    svg{
+        fill: $text-color-white;
+        width: 24px;
+        height: 24px;
+    }
 }

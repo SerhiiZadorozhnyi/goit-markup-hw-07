@@ -9,46 +9,46 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
 
-.commands-div h2{
-    padding-bottom: 50px;
-    text-align: center;
+    h2{
+        padding-bottom: 50px;
+        text-align: center;
+    }
 }
 
 .commands-list{
     display: flex;
     justify-content: space-between;
-}
 
-.commands-list li{
-    width: 270px;
-    height: 428px;
-    background: $text-color-white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+    li{
+        width: 270px;
+        height: 428px;
+        background: $text-color-white;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        color: $text-color-black;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        color: $text-color-grey;
+        padding-top: 10px;
+    }
 }
 
 .commands-text{
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-}
-
-.commands-list h3{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
-    color: $text-color-black;
-}
-
-.commands-list p{
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.03em;
-    color: $text-color-grey;
-    padding-top: 10px;
 }
 
 .social-list{
@@ -68,14 +68,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: $animation-timing-time;
 
-.social-list-link:hover,
-.social-list-link:focus{
+    &:hover,
+    &:focus{
     color: $text-color-white;
     background-color: $accent-color;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: $animation-timing-time;
+    }
 }
 
 .social-list-icon{

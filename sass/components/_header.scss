@@ -20,10 +20,10 @@
     letter-spacing: 0.03em;
     color: $accent-color;
     margin-right: 93px;
-}
 
-.logo span{
-    color: $black-color;
+    span{
+        color: $black-color;
+    }
 }
 
 /*Навигация страницы*/
@@ -34,44 +34,44 @@
 
 .site-nav{
     display: flex;
-}
 
-.site-nav a{
-    color: $text-color-black;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    transition: $animation-timing-time;
-}
+    a{
+        color: $text-color-black;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        transition: $animation-timing-time;
 
-.site-nav li:nth-child(-n+2){
-    padding-right: 50px;
-}
+        &:hover,
+        &:focus{
+        color: $bt-second;
+        transition: $animation-timing-time;
+        }
+    }
 
-.site-nav li{
-    display: flex;
-    justify-content: space-around;
-}
+    li{
+        display: flex;
+        justify-content: space-around;
 
-.site-nav a:hover,
-.site-nav a:focus{
-    color: $bt-second;
-    transition: $animation-timing-time;
-}
+        &:nth-child(-n+2){
+            padding-right: 50px;
+        }
+    }
 
-.site-nav .link.current{
-    color: $accent-color;
-}
+    .link.current{
+        color: $accent-color;
 
-.site-nav .link.current::after{
-    display: box;
-    background: currentColor;
-    content: "";
-    width: inherit;
-    height: 4px;
-    border-radius: 2px;
-    display: flex;
-    position: relative;
-    top: 31.5px;
+        &:after{
+            display: box;
+            background: currentColor;
+            content: "";
+            width: inherit;
+            height: 4px;
+            border-radius: 2px;
+            display: flex;
+            position: relative;
+            top: 31.5px;
+        }
+    }
 }
